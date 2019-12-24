@@ -21,7 +21,8 @@ public class IOUtils {
         }
     }
 
+
     public static String sanitizeFilename(String inputName) {
-        return inputName.replaceAll("[^a-zA-Z0-9-_.]", "_");
+        return inputName.replaceAll("\\\\|/|\\.\\.|:", "_");
     }
 }
